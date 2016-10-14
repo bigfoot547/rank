@@ -22,4 +22,4 @@ This mod is going to be made so that it works with the /nick command in my morec
 **1.0**: Initial Commit
 
 # License
-This mod is licenced under the **LGPL v3.0**
+This mod is licenced under the **LGPL v2.1+**
