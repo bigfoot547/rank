@@ -19,7 +19,7 @@ This mod also makes players have a rank in their nametag so their nametag looks 
 This mod is going to be made so that it works with the /nick command in my morecommands mod.
 
 # Changelog
-**1.0**: Initial Commit
+**0.1.0**: Initial Commit
 
 # License
 This mod is licenced under the **LGPL v2.1+**
