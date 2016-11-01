@@ -80,10 +80,11 @@ minetest.register_on_shutdown(function()
 end)
 
 minetest.register_on_chat_message(function(name, message)
-	if string.find(message, '/') and string.find(message, '/') == 1 then
-		minetest.chat_send_all("<["..minetest.colorize(rank_colors[ranks[name]], ranks[name]).."] "..name.."> "..message)
+	if message:sub(1,1) == "/" then
+		return false
 	else
-		return
+		minetest.chat_send_all("<["..minetest.colorize(rank_colors[ranks[name]], ranks[name]).."] "..name.."> "..message)
+		return true
 	end
 	return ""
 end)
