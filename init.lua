@@ -82,11 +82,18 @@ end)
 minetest.register_on_chat_message(function(name, message)
 	if message:sub(1,1) == "/" then
 		return false
-	else
-		minetest.chat_send_all("<["..minetest.colorize(rank_colors[ranks[name]], ranks[name]).."] "..name.."> "..message)
-		return true
 	end
-	return ""
+	if minetest.get_modpath("morecommands") then
+		if nicked_players[name] then
+			local pname = "~" .. nicked_players[name]
+		else
+			local pname = name
+		end
+	else
+		local pname = name
+	end
+	minetest.chat_send_all("<["..minetest.colorize(rank_colors[ranks[name]], ranks[name]).."] "..pname.."> "..message)
+	return true
 end)
 
 minetest.register_chatcommand("rankup", {
