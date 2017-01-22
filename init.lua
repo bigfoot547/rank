@@ -83,14 +83,15 @@ minetest.register_on_chat_message(function(name, message)
 	if message:sub(1,1) == "/" then
 		return false
 	end
+	local pname
 	if minetest.get_modpath("morecommands") then
 		if nicked_players[name] then
-			local pname = "~" .. nicked_players[name]
+			pname = "~" .. nicked_players[name]
 		else
-			local pname = name
+			pname = name
 		end
 	else
-		local pname = name
+		pname = name
 	end
 	minetest.chat_send_all("<["..minetest.colorize(rank_colors[ranks[name]], ranks[name]).."] "..pname.."> "..message)
 	return true
