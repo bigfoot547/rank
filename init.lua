@@ -38,8 +38,8 @@ minetest.register_chatcommand("rank", {
 	func = function(name, param)
 		local target = param:split(' ')[1]
 		local param = param:split(' ')[2]
+		if not param then return false, "Invalid Usage. See /help rank." end
 		param = param:lower()
-		if not param then return false, "Invalid Usage." end
 		if param == "wood" or param == "stone" or param == "coal" or param == "iron" or param == "copper" or param == "gold" or param == "mese"
 			or param == "diamond" or param == "obsidian" or param == "air" or param == "void" or param == "admin" or param == "moderator" or param == "bronze" then
 			if minetest.get_player_by_name(target) then
