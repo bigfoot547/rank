@@ -37,6 +37,7 @@ minetest.register_chatcommand("rank", {
 	params = "<name> wood|stone|coal|iron|copper|gold|mese|diamond|obsidian|air|void|helper|moderator|admin",
 	privs = {server = true, rank = true},
 	func = function(name, param)
+		local target = param:split(' ')[1]
 		local param = param:split(' ')[2]
 		if not param then return false, "Invalid Usage. See /help rank." end
 		param = param:lower()
