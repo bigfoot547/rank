@@ -25,6 +25,7 @@ rank_colors = {
 	obsidian = "#1a1a1a",
 	air = "#c8e7ff",
 	void = "#410041",
+	helper = "#2859d6",
 	admin = "#ff0000",
 	moderator = "#0000ff"
 }
@@ -33,14 +34,14 @@ minetest.register_privilege("rank", {description = "Can change ranks.", give_to_
 
 minetest.register_chatcommand("rank", {
 	description = "Set a player's rank",
-	params = "<name> wood|stone|coal|iron|copper|gold|mese|diamond|obsidian|air|void|moderator|admin",
+	params = "<name> wood|stone|coal|iron|copper|gold|mese|diamond|obsidian|air|void|helper|moderator|admin",
 	privs = {server = true, rank = true},
 	func = function(name, param)
 		local param = param:split(' ')[2]
 		if not param then return false, "Invalid Usage. See /help rank." end
 		param = param:lower()
 		if param == "wood" or param == "stone" or param == "coal" or param == "iron" or param == "copper" or param == "gold" or param == "mese"
-			or param == "diamond" or param == "obsidian" or param == "air" or param == "void" or param == "admin" or param == "moderator" or param == "bronze" then
+			or param == "diamond" or param == "obsidian" or param == "air" or param == "void" or param == "admin" or param == "moderator" or param == "bronze" or param == "helper" then
 			if minetest.get_player_by_name(target) then
 				minetest.get_player_by_name(target):set_nametag_attributes({text = "["..color(rank_colors[param])..param..color("#ffffff").."] "..target})
 				ranks[target] = param
@@ -198,6 +199,8 @@ minetest.register_chatcommand("rankup", {
 			minetest.chat_send_player(name, "You can't upgrade any more unless you got a donor rank.")
 		elseif rank == "air" or rank == "void" then
 			minetest.chat_send_player(name, "You cannot upgarade a donor rank.")
+		elseif rank == "helper" then
+			minetest.chat_send_player(name, "You may not rankup from helper.")
 		elseif rank == "moderator" then
 			minetest.chat_send_player(name, "Ask the admin for an upgade, Not me.")
 		elseif rank == "admin" then
