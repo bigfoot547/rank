@@ -99,7 +99,7 @@ minetest.register_on_chat_message(function(name, message)
 end)
 
 minetest.register_chatcommand("rankup", {
-	description = "Increse your rank.",
+	description = "Increase your rank.",
 	privs = {interact = true},
 	params = "",
 	func = function(name, param)
@@ -112,7 +112,7 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "stone"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors.stone).."stone"..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors.stone).."stone"..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 40 stone to upgrade."))
 			end
@@ -122,7 +122,7 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "coal"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 20 coal blocks to upgrade."))
 			end
@@ -132,7 +132,7 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "iron"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 20 iron blocks to upgrade."))
 			end
@@ -142,7 +142,7 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "copper"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 20 copper blocks to upgrade."))
 			end
@@ -152,7 +152,7 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "bronze"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 20 bronze blocks to upgrade."))
 			end
@@ -162,7 +162,7 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "gold"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 20 bronze blocks to upgrade."))
 			end
@@ -172,7 +172,7 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "mese"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 20 mese blocks to upgrade."))
 			end
@@ -182,7 +182,7 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "diamond"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 20 mese blocks to upgrade."))
 			end
@@ -192,18 +192,18 @@ minetest.register_chatcommand("rankup", {
 				player:set_wielded_item(wielditem)
 				ranks[name] = "obsidian"
 				player:set_nametag_attributes({text = "["..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").."] "..name})
-				minetest.chat_send_all("Congradulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
+				minetest.chat_send_all("Congratulations "..name.." for upgrading to the "..color(rank_colors[ranks[name]])..ranks[name]..color("#ffffff").." rank!")
 			else
 				minetest.chat_send_player(name, minetest.colorize("#ff0000", "ERROR: You need to hold 20 obsidian blocks to upgrade."))
 			end
 		elseif rank == "obsidian" then
 			minetest.chat_send_player(name, "You can't upgrade any more unless you got a donor rank.")
 		elseif rank == "air" or rank == "void" then
-			minetest.chat_send_player(name, "You cannot upgarade a donor rank.")
+			minetest.chat_send_player(name, "You cannot upgrade a donor rank.")
 		elseif rank == "helper" then
 			minetest.chat_send_player(name, "You may not rankup from helper.")
 		elseif rank == "moderator" then
-			minetest.chat_send_player(name, "Ask the admin for an upgade, Not me.")
+			minetest.chat_send_player(name, "Ask the admin for an upgrade, not me.")
 		elseif rank == "admin" then
 			minetest.chat_send_player(name, "You are already an admin, what more do you want?")
 		else
